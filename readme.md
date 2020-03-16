@@ -6,10 +6,10 @@ usage
 =====
 Insert function into loop. Remember to put empty print() after loop to jump cursor to the next line.
 ```python
-max=101
-for ii in range(max):
+max=100
+for ii in range(max+1):
     #do something here
-    print_progress_bar(ii, max-1)
+    print_progress_bar(ii, max)
 print() #move cursor next line or you will just overwrite progress bar
 ```
 
@@ -74,7 +74,7 @@ my_theme = {
     'title': 'done',
 }
 print_progress_bar(0, 100, **my_theme)
-print()
+print() #move cursor to the next line
 print_progress_bar(1, 100, **my_theme)
 print()
 print_progress_bar(99, 100, **my_theme)
