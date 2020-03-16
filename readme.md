@@ -2,6 +2,16 @@ progress_bar
 ============
 simple and customizable progress bar for python 3 console output
 
+usage
+=====
+Insert function into loop. Remember to put empty print() after loop to jump cursor to the next line.
+```python
+max=101
+for ii in range(max):
+    #do something here
+    print_progress_bar(ii, max-1)
+print() #move cursor next line or you will just overwrite progress bar
+```
 
 example 1
 =========
