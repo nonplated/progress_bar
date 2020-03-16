@@ -23,3 +23,26 @@ print()
 ##############################################################
 print_progress_bar(1, 10, length=4)
 print()
+
+##############################################################
+my_theme = {
+    'length': 12,
+    'char_begin': '>',
+    'char_end': '',
+    'char_full': '|',
+    'char_empty': '.',
+    'title': 'done',
+}
+print_progress_bar(0, 100, **my_theme)
+print()
+print_progress_bar(1, 100, **my_theme)
+print()
+print_progress_bar(99, 100, **my_theme)
+print()
+print_progress_bar(100, 100, **my_theme)
+print()
+print_progress_bar(120, 100, **my_theme)
+print()
+print_progress_bar(999, 100, **my_theme)
+print()
+

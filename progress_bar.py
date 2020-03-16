@@ -14,8 +14,8 @@ def get_progress_bar(current, maximum=100, **kwargs) -> str:
         return 'Set "maximum" to non zero number.'
 
     percent = (current * 100) / maximum
-    # percent = min(max(percent, 100), 0)  # min-max: 0-100
     cur_pos = int(percent * length // 100)
+    cur_pos = length if cur_pos>length else cur_pos #dont draw more than 100%
     progress_bar = (char_full*cur_pos + char_empty*(length-cur_pos))
 
     return "{}{}{} {:3d}% {}".format(
